@@ -1,9 +1,15 @@
 
-
+:root{
+    --color-violeta: #6b53f0;
+    --color-violeta-dark: #6B53F0;
+}
 
 html {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
+}
+body{
+    margin: 0;
 }
 
 p {
@@ -12,29 +18,176 @@ p {
     font-size: 0.9em;
     font-weight: 500;
 }
-
+h2{
+    margin: 0px;
+    color: white;
+    font-size: 2em;
+    line-height: 1.2;
+}
 button {
     background-color: white;
     border-radius: 30px;
-    padding: 0px 1.5em;
+    /*padding: 0px 1.5em;*/
     height: 2.5em;
     border: 2px solid black;
-    font-size: 0.8em;
+    font-size: 1em;
     width: 8em;
 }
-
+button:hover{
+    background-color: black;
+    color: white;
+}
+button#sumate:hover{
+    background-color: var(--color-violeta);
+    color: white;
+}
+button#sumate{
+    border-color: var(--color-violeta);
+    color: var(--color-violeta);
+}   
+div#navbar {
+    display: flex; 
+    border-bottom: 1px solid gray; 
+    padding: 0.9em 50em; 
+    justify-content: space-between;
+}
+div#navbar p:hover{
+    color: var(--color-violeta)
+}
 div#navbar-left img {
     width: 8em;
+}
+div#row-1{
+    display: flex;
+    width: 100%;
+}
+div#post{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    max-width: 1240px;
+    margin: 2em auto;
+}
+div#post-content p{
+    text-align: center;
+    margin: 1em;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+div#post-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 1em;
+}
+div#post-buttons button{
+    margin: 0 0.5em;
+}
+
+
+div#row-2{
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: black;
+    color: white;
+    padding-top: 4.2em;
+    padding-bottom: 4.2em;
+    padding-left: 20em;
+    padding-right: 20em;
+}
+
+div#box-row-2{
+    width: 50%;
+    padding: 1em;
+}
+div#box-row-2 p{
+    font-size: 1em;
+    font-weight: 400;
+}
+#paragraph{
+    padding-top: 0;
+    padding-right: 4em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+#paragraph p{
+    line-height: 1.7em;
+}
+
+#stadistics{
+    padding-top: 2em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+div#box-texts{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+div#box-text-number{
+    font-size: 4em;
+    font-weight: 700;
+}
+
+div#text-simbol{
+    display: flex;
+    flex-wrap: nowrap;
+   /* font-size: 4em;
+    font-weight: 700;*/
+}
+
+div#box-text-simbol{
+    font-size: 3em;
+    margin: 0.1em 0em;
+    color:  var(--color-violeta-dark);
+}
+
+div#box-estadistics{
+    padding: 0.9em;
+}
+
+
+
+
+
+@media (width > 800px) {
+    html {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    div#navbar {
+        padding: 0.9em 1em;
+    }
+}
+@media (width > 1300px) {
+    html {
+        font-size: 14px;
+    }
+    div#navbar {
+        padding: 0.9em 4.5em;
+    }
 }
 
 @media (width >= 2500px) {
     html {
         font-size: 28px;
     }
+    div#navbar {
+        width: 50em;
+        padding: 0.9em 50em;
+    }
 }
 
 @media (width >= 3500px) {
     html {
         font-size: 32px;
+    }
+    div#navbar {
+        padding: 0.9em 2em;
     }
 }
